@@ -351,7 +351,7 @@ def scan(access_token, api_endpoint):
 
             # print("(%s) %s is visible at (%s, %s) for %s seconds (%sm %s from you)" % (poke.pokemon.PokemonId, pokemons[poke.pokemon.PokemonId - 1]['Name'], poke.Latitude, poke.Longitude, poke.TimeTillHiddenMs / 1000, int(origin.get_distance(other).radians * 6366468.241830914), direction))
             
-            result = "%s visible at <https://www.google.com/maps?q=%s,%s|(%s, %s)>" % (pokemons[poke.pokemon.PokemonId - 1]['Name'], poke.Latitude, poke.Longitude, poke.Latitude, poke.Longitude)
+            result = "%s visible at <https://maps.google.com/maps?q=%s,%s|(%s, %s)>" % (pokemons[poke.pokemon.PokemonId - 1]['Name'], poke.Latitude, poke.Longitude, poke.Latitude, poke.Longitude)
             poke_list.append(result)
 
         payload = {'text': "Pokemon scan results:\n\n %s" % ('\n'.join(poke_list))}
